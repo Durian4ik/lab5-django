@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив статей</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/article.css' %}">
+</head>
+<body class="archive">
+    <div class="container"><div class="logo-wrapper">
+        <div class="logo">
+            <h1>Django Public blog</h1>
+        </div></div>
+    <div class="new-post-link">
+        <a href="/article/new/">✏️ Написать статью</a>
+    </div>
+        <div class="archive">
+            {% for post in posts %}
+            <div class="one-post">
+                <h2 class="post-title">
+                    <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+                </h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.get_russian_date }}</div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

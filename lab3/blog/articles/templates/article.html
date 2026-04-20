@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/article.css' %}">
+</head>
+<body class="article">
+    <div class="container">
+        <!-- Логотип как на главной странице -->
+        <div class="logo-wrapper">
+            <div class="logo">
+                <h1>Django Public blog</h1>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="all-posts-link">
+                <a href="/">Все статьи</a>
+            </div>
+        </div>
+
+        <h1 class="article-title">{{ post.title }}</h1>
+
+        <div class="article-meta">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.get_russian_date }}</div>
+        </div>
+
+        <div class="article-content">
+            {{ post.text|linebreaks }}
+        </div>
+    </div>
+</body>
+</html>

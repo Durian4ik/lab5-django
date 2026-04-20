@@ -1,0 +1,383 @@
+/* ========== ОБЩИЕ СТИЛИ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+/*  СТРАНИЦА СО СПИСКОМ СТАТЕЙ (archive.html)  */
+body.archive {
+    background: #1abc9c;
+}
+
+/* Контейнер для контента на главной */
+body.archive .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body.archive .logo-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Логотип "Django Public blog" */
+body.archive .logo {
+    background: linear-gradient(180deg, #16a085 50%, #0e6655 50%);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;  /*  рамка по размеру текста */
+    width: auto;            /*  авто-ширина */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.archive .logo h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+/* Подчеркивание только под текстом заголовка */
+body.archive .post-title {
+    border-bottom: 2px solid white;
+    display: inline-block;  /*  линия будет только под текстом */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Стили для каждой статьи */
+body.archive .one-post {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Заголовок статьи - БЕЛАЯ ссылка */
+body.archive .post-title {
+    margin-bottom: 5px;
+}
+
+body.archive .post-title a {
+    color: white ;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+/* Информация об авторе и дате в одной строке */
+body.archive .article-info {
+    overflow: hidden;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body.archive .article-author {
+    float: left;
+    width: 50%;
+}
+
+body.archive .article-created-date {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+/* Текст статьи */
+body.archive .article-text {
+    color: white;
+    line-height: 1.5;
+    clear: both;
+}
+
+/*  СТРАНИЦА ОТДЕЛЬНОЙ СТАТЬИ (article.html)  */
+body.article {
+    background: #1abc9c;
+}
+
+/* Контейнер для контента на странице статьи */
+body.article .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Кнопка "Все записи" в правом верхнем углу */
+body.article .header {
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+}
+
+body.article .all-posts-link {
+    float: right;
+}
+
+body.article .all-posts-link a {
+    color: white;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+}
+
+body.article .logo-wrapper {
+    text-align: left;  /*это центрирует логотип */
+    margin-bottom: -70px;
+}
+
+body.article .logo {
+    color: white;
+    background: linear-gradient(180deg, #16a085 50%, #0e6655 50%);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    display: inline-block;  /* рамка по размеру текста */
+    width: auto;            /* авто-ширина */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Заголовок статьи */
+body.article .article-title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Информация об авторе и дате */
+body.article .article-meta {
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+
+    color: white ;
+    font-size: 14px;
+}
+
+body.article .article-author {
+    float: left;
+}
+
+body.article .article-created-date {
+    float: right;
+    text-align: right;
+}
+
+/* Текст статьи */
+body.article .article-content {
+    color: white;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* ========== СТИЛИ ДЛЯ ФОРМЫ СОЗДАНИЯ СТАТЬИ ========== */
+body.archive .content {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+body.archive .content h1 {
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+body.archive .post-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+body.archive .form-field {
+    margin-bottom: 20px;
+}
+
+body.archive .form-field input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body.archive .form-field textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body.archive .submit-btn {
+    background: #16a085;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.archive .submit-btn:hover {
+    background: #0e6655;
+}
+
+body.archive .form-errors {
+    color: #ffcccc;
+    background: rgba(255, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+body.archive .back-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+body.archive .back-link a {
+    color: white;
+    text-decoration: underline;
+}
+
+body.archive .back-link a:hover {
+    text-decoration: none;
+}
+
+body.archive .new-post-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+body.archive .new-post-link a {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+body.archive .new-post-link a:hover {
+    text-decoration: none;
+}
+
+
+/* ========== СТИЛИ ДЛЯ ФОРМЫ СОЗДАНИЯ СТАТЬИ ========== */
+
+body.archive .form-container {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 35px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+
+body.archive .form-container h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+body.archive .create-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+body.archive .form-group {
+    margin-bottom: 25px;
+}
+
+body.archive .form-group label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+body.archive .form-group input[type="text"],
+body.archive .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+    background: white;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body.archive .form-group input[type="text"]:focus,
+body.archive .form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.archive .form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+body.archive .btn-submit {
+    background: linear-gradient(135deg, #16a085, #0e6655);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.archive .btn-submit:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.archive .btn-cancel {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+body.archive .btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+body.archive .error-message {
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
